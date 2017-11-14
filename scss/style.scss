@@ -1,0 +1,274 @@
+/* All common stylesheet codes should come here */
+
+@import "global";
+body {
+    font-family: $font-secondary;
+}
+
+#topnav {
+    text-align: right;
+    background-color: $color-base;
+    color: $color-white;
+    .list-contacts {
+        li {
+            padding: 10px 0;
+            margin-left: 15px;
+            i {
+                font-size: 0.97rem;
+                vertical-align: middle;
+            }
+            a {
+                font-size: 0.85rem;
+                color: inherit;
+                text-decoration: none;
+                @include transition(all 0.4s);
+                &:hover {
+                    color: $color-main;
+                }
+            }
+            &:before {
+                content: '';
+                border-right: 1px solid $color-white;
+                margin-right: 15px;
+            }
+            &:first-child {
+                margin-left: 0;
+                &:before {
+                    border: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+#mainnav {
+    background-color: $color-white;
+    .navbar-main {
+        margin-bottom: 0;
+        border: 0;
+        border-radius: 0;
+        .navbar-brand {
+            height: auto;
+            padding: 0 15px;
+            a {
+                display: block;
+                width: 100px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        #mainNavigation {
+            padding: 0;
+        }
+        .navbar-nav {
+            padding: 25px 0;
+            li {
+                a {
+                    color: $color-base;
+                    background-color: $color-white;
+                    @include transition(all 0.4s);
+                    &:hover {
+                        color: $color-main;
+                    }
+                }
+                &.active {
+                    a {
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    @extend .relative-box;
+    padding: 30px 0;
+    background-image: url(../img/footer-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-white;
+    .container{
+        > div{
+            padding: 0 40px;
+        }
+        > div:first-child{
+            padding-left: 0;
+        }
+        > div:last-child{
+            padding-right: 0;
+        }
+    }
+    &:before {
+        content: '';
+        background-color: rgba($color-base, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .para {
+        font-size: 0.9rem;
+        line-height: 1.25em;
+    }
+    .img-brand {
+        display: block;
+        img {
+            width: 120px;
+        }
+    }
+    .socialRespons {
+        @extend .relative-box;
+        margin-bottom: 15px;
+        .heading {
+            font-family: $font-secondary;
+            font-size: 1.25rem;
+        }
+    }
+    .list-address {
+        @extend .relative-box;
+        li {
+            display: inline-flex;
+            margin-bottom: 10px;
+            i {
+                vertical-align: middle;
+                margin-right: 15px;
+                font-size: 1rem;
+                margin-top: 3px;
+                @include transition(all 0.35s);
+            }
+            a {
+                color: $color-white;
+                display: inline-block;
+                text-decoration: none;
+                @include transition(all 0.35s);
+                &:hover {
+                    color: lighten($color-main, 10%);
+                }
+            }
+        }
+    }
+    .columnHead {
+        height: 130px;
+        margin: 0;
+        padding-top: 70px;
+        &.findHead {
+            height: 110px;
+            padding-top: 50px;
+        }
+    }
+    .list-certif {
+        @extend .relative-box;
+        li {
+            margin-bottom: 10px;
+            a {
+                display: table;
+                color: $color-white;
+                text-decoration: none;
+                @include transition(all 0.35s ease);
+                &:hover {
+                    color: lighten($color-main, 10%);
+                }
+                i {
+                    display: table-cell;
+                    vertical-align: baseline;
+                    width: 32px;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+                span {
+                    display: table-cell;
+                    vertical-align: top;
+                    padding: 5px;
+                    h4 {
+                        margin: 0;
+                        font-family: inherit;
+                        margin-bottom: 10px;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+    .form-subscribe {
+        .form-control {
+            border-radius: 0;
+            background-color: $color-special-gray;
+            color: $color-base;
+            width: 70%;
+            height: 40px;
+        }
+        .btn-subscribe {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border-radius: 0;
+            background: $color-main;
+            border-color: $color-main;
+            color: $color-white;
+            width: 30%;
+            margin-left: -12px;
+            box-shadow: 0px 0px 7px 0px $color-special-gray;
+            letter-spacing: normal;
+            @include transition(all 0.4s ease);
+            &:hover,
+            &:focus {
+                outline: 0;
+                background-color: $color-base;
+                border-color: $color-base;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .list-social {
+        li {
+            a {
+                display: block;
+                background: #e0e0e0;
+                color: #333;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                padding-top: 8px;
+                font-size: 1rem;
+                @include transition(all 0.35s ease);
+                &:hover {
+                    background-color: $color-main;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+#copyrights {
+    @extend .relative-box;
+    background-color: darken($color-base, 5%);
+    font-size: 0.9rem;
+    font-family: $font-secondary;
+    line-height: 1.5em;
+    color: lighten($color-base, 40%);
+    .company-label {
+        padding: 20px 15px;
+        p {
+            margin: 0;
+            a {
+                display: inline-block;
+                color: lighten($color-base, 40%);
+                text-decoration: none;
+                @include transition(all 0.35s);
+                &:hover {
+                    color: lighten($color-main, 20%);
+                }
+            }
+        }
+    }
+    .agency-label {
+        text-align: right;
+        @extend .company-label;
+    }
+}
