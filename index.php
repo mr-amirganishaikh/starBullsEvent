@@ -19,6 +19,13 @@
     <main>
         <div id="temp" style="height: 100vh; width: 100%; background: url(img/sliders/dummy.jpg) center center no-repeat;background-size: cover; margin-bottom: 50vh;"></div>
     </main>
+	
+	<!--<section id="banner-bottom">
+	
+	<div class="container">
+	<h2>About StarBull</h2>
+	</div>
+	</section>-->
 
     <footer>
         <!-- Footer section included -->
